@@ -26,6 +26,9 @@
         <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right"></label>
         <div class="pk-w-sm-8">
             <button type="button" onclick="form_save.submit();this.disabled=true" class="pk-btn pk-btn-primary pk-radius-4">保存</button>
+            <button type="submit" action="index.php?c=app&a=quelaag_furysword:index&s=setting" class="pk-btn pk-btn-primary pk-radius-4">安装</button>
+            <a target="_blank" href="index.php?c=app&a=quelaag_furysword:index&s=clan" class="pk-btn pk-btn-danger pk-radius-4">家族首页</a>
+            <a target="_blank" href="index.php?c=app&a=quelaag_furysword:index&s=create_clan" class="pk-btn pk-btn-danger pk-radius-4">创建家族</a>
         </div>
     </div>
 </form>

@@ -1,0 +1,11 @@
+<li data-id="{$clanData['id']}" style="overflow:hidden; width:30%;">
+    <p class="fly-case-img">
+        <img src="{$clanData['logourl']}" onerror="this.src='app/quelaag_furysword/template/img/clanlogo.png'" alt="" style="width:100%;"> </p>
+    <h2>{$clanData['clanname']}</h2>
+    <p class="fly-case-desc">{$clanData['cradle']}</p>
+    <p class="fly-case-desc">{$clanData['introduction']}</p>
+    <div class="fly-case-info pk-text-right">
+        <a target="_blank" class="layui-btn layui-btn-primary" href="$clanData['mapurl']">树状家谱</a>
+        <a target="_blank" class="layui-btn layui-btn-primary" href="$clanData['clanurl']">进入家族</a>
+    </div>
+</li>

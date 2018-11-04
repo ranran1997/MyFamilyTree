@@ -11,8 +11,9 @@ $_G['SET']['EMBED_HEADMARKS'] .= <<<EOF
 EOF;
 
 // 修改网站名
-$_G['TABLE']['SET']['WEBNAME'] = $_G['SET']['APP_QUELAAG_FURYSWORD_WEBNAME'];
-$_G['TABLE']['SET']['WEBTITLE'] = $_G['SET']['APP_QUELAAG_FURYSWORD_WEBTITLE'];
+// 不能在 embed.php 文件中操作数据库
+// $_G['TABLE']['SET']['WEBNAME'] = $_G['SET']['APP_QUELAAG_FURYSWORD_WEBNAME'];
+// $_G['TABLE']['SET']['WEBTITLE'] = $_G['SET']['APP_QUELAAG_FURYSWORD_WEBTITLE'];
 
 // 修改一些样式
 $_G['SET']['EMBED_HEAD'] .= <<<EOF
@@ -26,7 +27,7 @@ EOF;
 
 // 添加切换版式选项
 $_G['SET']['FOOTERHTMLCODE'] .= <<<EOF
-<a href="https://www.linkfire.org/">电脑版</a>
-<a href="https://m.linkfire.org/">手机版</a>
+<a href="www.linkfire.org/">电脑版</a>
+<a href="m.linkfire.org/">手机版</a>
 <a target="_blank" href="mailto:admin@linkfire.org">联系站长</a>
 EOF;
