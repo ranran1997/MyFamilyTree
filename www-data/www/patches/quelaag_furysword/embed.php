@@ -18,16 +18,15 @@ EOF;
 // 修改一些样式
 $_G['SET']['EMBED_HEAD'] .= <<<EOF
 <style type="text/css">
+.layui-nav-item > a {color: #8590A6 !important;}
 .readcontent {text-align: justify;}
 p {text-align: justify;}
 pre {overflow: auto; white-space: pre !important; width: 100% !important; word-wrap: break-word;}
-.fly-footer a{padding:0 6px; font-weight: 400; color: #737573;}
+.fly-footer > p {text-align: center;}
+.fly-footer > p > a{padding:0 6px; font-weight: 400; color: #737573;}
 </style>
 EOF;
 
 // 添加切换版式选项
-$_G['SET']['FOOTERHTMLCODE'] .= <<<EOF
-<a href="www.linkfire.org/">电脑版</a>
-<a href="m.linkfire.org/">手机版</a>
-<a target="_blank" href="mailto:admin@linkfire.org">联系站长</a>
-EOF;
+// $_G['SET']['FOOTERHTMLCODE'] .= <<<EOF
+// EOF;
