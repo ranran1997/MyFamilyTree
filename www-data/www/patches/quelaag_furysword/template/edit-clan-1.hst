@@ -1,0 +1,5 @@
+<div style="width: 95%; margin: auto;">
+    <div class="pk-row pk-padding-bottom-15 pk-margin-bottom-15" style="border-bottom: solid 1px #458fce;"> </div>
+    <div class="pk-row pk-padding-bottom-15 pk-margin-bottom-15" style="border-bottom: solid 1px #458fce;">
+        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right pk-text-primary pk-text-nowrap">{$editMode}</label>
+    </div>

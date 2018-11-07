@@ -79,6 +79,7 @@
                             <p>签名</p>
                             <p data-name="sign">{$_G['TEMPUSER']['SIGN']}</p>
                         </li>
+                        <!-- 【克拉格的魔剑】修改代码 -->
                         <li class="_title">
                             <span>家族信息</span>
                         </li>

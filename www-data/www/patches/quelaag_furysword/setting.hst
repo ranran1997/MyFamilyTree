@@ -1,3 +1,19 @@
+<script type="text/javascript">
+    function setting() {
+        var req;
+        if (window.XMLHttpRequest) {
+            req = new XMLHttpRequest();
+        } else if (window.ActiveXObject) {
+            req = new ActiveXObject("Microsoft.XMLHTTP");
+        } else {
+            alert("您的浏览器不兼容XMLHTTP，请更换浏览器！");
+            return false;
+        }
+        req.open("GET", "index.php?c=app&a=quelaag_furysword:index&s=setting", false);
+        req.send(null);
+        return true;
+    }
+</script>
 <form name="form_save" method="post" action="index.php?c=app&a=superadmin:index&s=save&os={$_G['GET']['S']}&ot={$_G['GET']['T']}&table=set">
     <div class="pk-row pk-padding-bottom-15 pk-margin-bottom-15" style="border-bottom: solid 1px #458fce;">
         <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right pk-text-primary">克拉格的魔剑 应用设置</label>
@@ -13,20 +29,118 @@
         </div>
     </div>
     <div class="pk-row pk-padding-bottom-15">
-        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right pk-text-nowrap">修改网站名</label>
+        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right pk-text-nowrap">文字LOGO</label>
+        <div class="pk-w-sm-8">
+            <input class="pk-textbox" type="text" name="app_quelaag_furysword_logotext" placeholder="请输入设置值" value="{$_G['SET']['APP_QUELAAG_FURYSWORD_LOGOTEXT']}"> </div>
+    </div>
+    <div class="pk-row pk-padding-bottom-15">
+        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right pk-text-nowrap">图片LOGO</label>
+        <div class="pk-w-sm-8">
+            <input class="pk-textbox" type="text" name="app_quelaag_furysword_weblogo" placeholder="请输入设置值" value="{$_G['SET']['APP_QUELAAG_FURYSWORD_WEBLOGO']}"> </div>
+    </div>
+    <div class="pk-row pk-padding-bottom-15">
+        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right pk-text-nowrap">站长寄语</label>
+        <div class="pk-w-sm-8">
+            <input class="pk-textbox" type="text" name="app_quelaag_furysword_quotes" placeholder="请输入设置值" value="{$_G['SET']['APP_QUELAAG_FURYSWORD_QUOTES']}"> </div>
+    </div>
+    <div class="pk-row pk-padding-bottom-15">
+        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right pk-text-nowrap">备案号</label>
+        <div class="pk-w-sm-8">
+            <input class="pk-textbox" type="text" name="app_quelaag_furysword_beianhao" placeholder="请输入设置值" value="{$_G['SET']['APP_QUELAAG_FURYSWORD_BEIANHAO']}"> </div>
+    </div>
+    <div class="pk-row pk-padding-bottom-15">
+        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right pk-text-nowrap">头部HTML代码</label>
+        <div class="pk-w-sm-8">
+            <input class="pk-textbox" type="text" name="app_quelaag_furysword_headerhtmlcode" placeholder="请输入设置值" value="{$_G['SET']['APP_QUELAAG_FURYSWORD_HEADERHTMLCODE']}"> </div>
+    </div>
+    <div class="pk-row pk-padding-bottom-15">
+        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right pk-text-nowrap">导航HTML代码</label>
+        <div class="pk-w-sm-8">
+            <input class="pk-textbox" type="text" name="app_quelaag_furysword_navhtmlcode" placeholder="请输入设置值" value="{$_G['SET']['APP_QUELAAG_FURYSWORD_NAVHTMLCODE']}"> </div>
+    </div>
+    <div class="pk-row pk-padding-bottom-15">
+        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right pk-text-nowrap">页脚HTML代码</label>
+        <div class="pk-w-sm-8">
+            <input class="pk-textbox" type="text" name="app_quelaag_furysword_footerhtmlcode" placeholder="请输入设置值" value="{$_G['SET']['APP_QUELAAG_FURYSWORD_FOOTERHTMLCODE']}"> </div>
+    </div>
+    <div class="pk-row pk-padding-bottom-15">
+        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right pk-text-nowrap">友情链接</label>
+        <div class="pk-w-sm-8">
+            <input class="pk-textbox" type="text" name="app_quelaag_furysword_friendlinks" placeholder="请输入设置值" value="{$_G['SET']['APP_QUELAAG_FURYSWORD_FRIENDLINKS']}"> </div>
+    </div>
+    <div class="pk-row pk-padding-bottom-15">
+        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right pk-text-nowrap">head嵌入</label>
+        <div class="pk-w-sm-8">
+            <input class="pk-textbox" type="text" name="app_quelaag_furysword_embed_headmarks" placeholder="请输入设置值" value="{$_G['SET']['APP_QUELAAG_FURYSWORD_EMBED_HEADMARKS']}"> </div>
+    </div>
+    <div class="pk-row pk-padding-bottom-15">
+        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right pk-text-nowrap">模板加载前嵌入</label>
+        <div class="pk-w-sm-8">
+            <input class="pk-textbox" type="text" name="app_quelaag_furysword_embed_head" placeholder="请输入设置值" value="{$_G['SET']['APP_QUELAAG_FURYSWORD_EMBED_HEAD']}"> </div>
+    </div>
+    <div class="pk-row pk-padding-bottom-15">
+        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right pk-text-nowrap">模板加载后嵌入</label>
+        <div class="pk-w-sm-8">
+            <input class="pk-textbox" type="text" name="app_quelaag_furysword_embed_foot" placeholder="请输入设置值" value="{$_G['SET']['APP_QUELAAG_FURYSWORD_EMBED_FOOT']}"> </div>
+    </div>
+    <div class="pk-row pk-padding-bottom-15">
+        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right pk-text-nowrap">动态显示的标签</label>
+        <div class="pk-w-sm-8">
+            <input class="pk-textbox" type="text" name="app_quelaag_furysword_defaultlabel" placeholder="请输入设置值" value="{$_G['SET']['APP_QUELAAG_FURYSWORD_DEFAULTLABEL']}"> </div>
+    </div>
+    <div class="pk-row pk-padding-bottom-15">
+        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right pk-text-nowrap">网站名</label>
         <div class="pk-w-sm-8">
             <input class="pk-textbox" type="text" name="app_quelaag_furysword_webname" placeholder="请输入设置值" value="{$_G['SET']['APP_QUELAAG_FURYSWORD_WEBNAME']}"> </div>
     </div>
     <div class="pk-row pk-padding-bottom-15">
-        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right pk-text-nowrap">修改网站标题</label>
+        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right pk-text-nowrap">网站标题</label>
         <div class="pk-w-sm-8">
             <input class="pk-textbox" type="text" name="app_quelaag_furysword_webtitle" placeholder="请输入设置值" value="{$_G['SET']['APP_QUELAAG_FURYSWORD_WEBTITLE']}"> </div>
     </div>
     <div class="pk-row pk-padding-bottom-15">
+        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right pk-text-nowrap">网站关键词</label>
+        <div class="pk-w-sm-8">
+            <input class="pk-textbox" type="text" name="app_quelaag_furysword_webaddedwords" placeholder="请输入设置值" value="{$_G['SET']['APP_QUELAAG_FURYSWORD_WEBADDEDWORDS']}"> </div>
+    </div>
+    <div class="pk-row pk-padding-bottom-15">
+        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right pk-text-nowrap">网站优化追加词</label>
+        <div class="pk-w-sm-8">
+            <input class="pk-textbox" type="text" name="app_quelaag_furysword_webkeywords" placeholder="请输入设置值" value="{$_G['SET']['APP_QUELAAG_FURYSWORD_WEBKEYWORDS']}"> </div>
+    </div>
+    <div class="pk-row pk-padding-bottom-15">
+        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right pk-text-nowrap">网站文字介绍</label>
+        <div class="pk-w-sm-8">
+            <input class="pk-textbox" type="text" name="app_quelaag_furysword_webdescription" placeholder="请输入设置值" value="{$_G['SET']['APP_QUELAAG_FURYSWORD_WEBDESCRIPTION']}"> </div>
+    </div>
+    <div class="pk-row pk-padding-bottom-15">
+        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right pk-text-nowrap">右侧广告位1</label>
+        <div class="pk-w-sm-8">
+            <input class="pk-textbox" type="text" name="app_quelaag_furysword_template_puyuetian_fly_ad_yc1" placeholder="请输入设置值"
+                value="{$_G['SET']['APP_QUELAAG_FURYSWORD_TEMPLATE_PUYUETIAN_FLY_AD_YC1']}"> </div>
+    </div>
+    <div class="pk-row pk-padding-bottom-15">
+        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right pk-text-nowrap">右侧广告位2</label>
+        <div class="pk-w-sm-8">
+            <input class="pk-textbox" type="text" name="app_quelaag_furysword_template_puyuetian_fly_ad_yc2" placeholder="请输入设置值"
+                value="{$_G['SET']['APP_QUELAAG_FURYSWORD_TEMPLATE_PUYUETIAN_FLY_AD_YC2']}"> </div>
+    </div>
+    <div class="pk-row pk-padding-bottom-15">
+        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right pk-text-nowrap">右侧广告位3</label>
+        <div class="pk-w-sm-8">
+            <input class="pk-textbox" type="text" name="app_quelaag_furysword_template_puyuetian_fly_ad_yc3" placeholder="请输入设置值"
+                value="{$_G['SET']['APP_QUELAAG_FURYSWORD_TEMPLATE_PUYUETIAN_FLY_AD_YC3']}"> </div>
+    </div>
+    <div class="pk-row pk-padding-bottom-15">
+        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right pk-text-nowrap">右侧广告位4</label>
+        <div class="pk-w-sm-8">
+            <input class="pk-textbox" type="text" name="app_quelaag_furysword_template_puyuetian_fly_ad_yc4" placeholder="请输入设置值"
+                value="{$_G['SET']['APP_QUELAAG_FURYSWORD_TEMPLATE_PUYUETIAN_FLY_AD_YC4']}"> </div>
+    </div>
+    <div class="pk-row pk-padding-bottom-15">
         <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right"></label>
         <div class="pk-w-sm-8">
-            <button type="button" onclick="form_save.submit();this.disabled=true" class="pk-btn pk-btn-primary pk-radius-4">保存</button>
-            <button type="submit" action="index.php?c=app&a=quelaag_furysword:index&s=setting" class="pk-btn pk-btn-primary pk-radius-4">安装</button>
+            <button type="button" onclick="form_save.submit();setting();this.disabled=true" class="pk-btn pk-btn-primary pk-radius-4">保存</button>
             <a target="_blank" href="index.php?c=app&a=quelaag_furysword:index&s=clan" class="pk-btn pk-btn-danger pk-radius-4">家族首页</a>
             <a target="_blank" href="index.php?c=app&a=quelaag_furysword:index&s=create_clan" class="pk-btn pk-btn-danger pk-radius-4">创建家族</a>
         </div>

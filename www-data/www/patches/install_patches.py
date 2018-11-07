@@ -23,6 +23,7 @@ class PatchesInstaller:
                         os.makedirs(os.path.dirname(patch['backup']))
                     shutil.copyfile(patch['to'], patch['backup'])
                 shutil.copyfile(patch['from'], patch['to'])
+                # 如果存在 append 内容，在文件末尾追加写入
                 if 'append' in patch:
                     args = [self.args[x] for x in patch['append']['args']
                             ] if 'args' in patch['append'] else []
@@ -35,6 +36,7 @@ class PatchesInstaller:
         for patch in self.dirs:
             try:
                 print(patch['description'])
+                # 仅当 backup 选项被启用，并且不存在已有备份时，备份目录
                 if 'backup' in patch and not os.path.exists(patch['backup']):
                     shutil.copytree(patch['to'], patch['backup'], False)
                 if os.path.exists(patch['to']):

@@ -232,6 +232,8 @@ switch ($_G['GET']['TYPE']) {
             if ($userhead && InArray(getUserQX($id), 'uploadhead')) {
                 file_put_contents("{$_G['SYSTEM']['PATH']}/userhead/{$id}.png", base64_decode($userhead));
             }
+            // 【克拉格的魔剑】新增代码
+            // 新增表单项姓名
             $userarray['name'] = $name;
         } elseif ($_POST['_submittype'] == 2) {
             $id = $_G['USER']['ID'];
@@ -331,6 +333,7 @@ $_G['SET']['WEBTITLE'] = "{$_G['TEMPUSER']['NICKNAME']}的个人主页" . ($page
 
 $_G['TEMPLATE']['BODY'] = 'center';
 
+// 【克拉格的魔剑】新增代码
 $_G['TEMPUSER']['CID'] = $_G['TABLE']['USER']->getData($_G['USER']['ID'])['cid'];
 $_G['TEMPUSER']['MID'] = $_G['TABLE']['USER']->getData($_G['USER']['ID'])['mid'];
 $_G['TEMPUSER']['FID'] = $_G['TABLE']['USER']->getData($_G['USER']['ID'])['fid'];

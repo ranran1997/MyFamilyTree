@@ -1,0 +1,33 @@
+<form name="edit_clan" method="post" action="index.php?c=app&a=quelaag_furysword:index&s=create_clan">
+    <div class="pk-row pk-padding-bottom-15">
+        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right">家族名</label>
+        <div class="pk-w-sm-8">
+            <input type="text" class="pk-textbox" name="clanname" value="{$clanData['clanname']}" placeholder="请填写家族名" {$readonly}> </div>
+        <div class="pk-w-sm-1"></div>
+    </div>
+    <div class="pk-row pk-padding-bottom-15">
+        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right">家族LOGO</label>
+        <div class="pk-w-sm-8">
+            <input type="text" class="pk-textbox" name="logourl" value="{$forumdata['logourl']}" placeholder="请填写LOGO链接地址"> </div>
+        <div class="pk-w-sm-1"></div>
+    </div>
+    <div class="pk-row pk-padding-bottom-15">
+        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right">发源地</label>
+        <div class="pk-w-sm-8">
+            <input type="text" class="pk-textbox" name="cradle" value="{htmlspecialchars($clanData['cradle'],ENT_QUOTES)}" placeholder="请填写发源地"> </div>
+        <div class="pk-w-sm-1"></div>
+    </div>
+    <div class="pk-row pk-padding-bottom-15">
+        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right">家族简介</label>
+        <div class="pk-w-sm-8">
+            <textarea rows="5" name="introduction" class="pk-textarea  pk-width-all" placeholder="请填写家族简介">{htmlspecialchars($clanData['introduction'],ENT_QUOTES)}</textarea> </div>
+        <div class="pk-w-sm-1"></div>
+    </div>
+    <div class="pk-row pk-padding-bottom-15">
+        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right"></label>
+        <div class="pk-w-sm-8">
+            <button class="pk-btn pk-btn-primary" type="button" onclick="edit_clan.submit();this.disabled=true">保存</button>
+        </div>
+    </div>
+</form>
+</div>

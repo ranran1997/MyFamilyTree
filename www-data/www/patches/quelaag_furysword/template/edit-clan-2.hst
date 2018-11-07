@@ -1,0 +1,61 @@
+<form name="form_save" method="post" action="index.php?c=app&a=superadmin:index&s=save&os=forum&ot={$t}&id={$_G['GET']['ID']}&table=readsort">
+    <div style="display: none;">
+        <input type="hidden" name="id" value="{Cnum($forumdata['id'],0)}">
+        <!-- 本版块ID -->
+        <input type="text" class="pk-textbox" value="{Cnum($forumdata['id'],'新建版块')}" readonly>
+        <!-- 上级版块ID -->
+        <select class="pk-textbox" name="pid" data-value="{Cnum($forumdata['pid'],0)}">
+            <option value="0">此版块为父版块</option> {$forumlist} </select>
+        <!-- 版块排序 -->
+        <input type="number" class="pk-textbox" name="rank" value="{Cnum($forumdata['rank'],0)}" title="数字，从小到大" placeholder="数字，从小到大">
+        <!-- 版块名称 -->
+        <input type="text" class="pk-textbox" name="title" value="{htmlspecialchars($forumdata['title'],ENT_QUOTES)}" placeholder="文字">
+        <!-- 版块介绍 -->
+        <textarea rows="5" name="content" class="pk-textarea  pk-width-all" placeholder="文字">{htmlspecialchars($forumdata['content'],ENT_QUOTES)}</textarea>
+        <!-- 版块标签 -->
+        <input type="text" class="pk-textbox" name="label" value="{htmlspecialchars($forumdata['label'],ENT_QUOTES)}" placeholder="多个用,分开，举例：爆料,原创">
+        <!-- URL跳转 -->
+        <input type="url" class="pk-textbox" name="url" value="{htmlspecialchars($forumdata['url'],ENT_QUOTES)}" placeholder="若版块为跳转版块请在此填写URL地址"> </div>
+    <!-- 版块LOGO地址 -->
+    <div class="pk-row pk-padding-bottom-15">
+        <label class="pk-w-sm-3 pk-padding-top-5 pk-text-bold pk-text-right">家族LOGO</label>
+        <div class="pk-w-sm-8">
+            <input type="text" class="pk-textbox" name="logourl" value="{htmlspecialchars($forumdata['logourl'],ENT_QUOTES)}"
+                placeholder="请填写LOGO链接地址"> </div>
+        <div class="pk-w-sm-1"></div>
+    </div>
+    <div style="display: none;">
+        <!-- 允许进入的用户组 -->
+        <input type="text" class="pk-textbox" name="allowgroupids" value="{htmlspecialchars($forumdata['allowgroupids'],ENT_QUOTES)}"
+            placeholder="请填写用户组的id即可，多个用英文的逗号分开">
+        <!-- 发帖阅读权限值 -->
+        <input type="number" class="pk-textbox" name="postlevel" value="{Cnum($forumdata['postlevel'],0)}" title="用户的阅读权限需达到此值才可在此版块发帖"
+            placeholder="用户的阅读权限需达到此值才可发帖">
+        <!-- 回复阅读权限值 -->
+        <input type="number" class="pk-textbox" name="replylevel" value="{Cnum($forumdata['replylevel'],0)}" title="用户的阅读权限需达到此值才可在此版块回复"
+            placeholder="用户的阅读权限需达到此值才可回复">
+        <!-- 浏览阅读权限值 -->
+        <input type="number" class="pk-textbox" name="looklevel" value="{Cnum($forumdata['looklevel'],0)}" title="用户的阅读权限需达到此值才可在此版块浏览帖子"
+            placeholder="用户的阅读权限需达到此值才可浏览帖子">
+        <!-- 管理员UID -->
+        <input type="text" class="pk-textbox" name="adminuids" value="{$forumdata['adminuids']}" title="该版块的管理员UID，多个用,分开"
+            placeholder="该版块的管理员UID，多个用,分开">
+        <!-- 禁止发帖 -->
+        <select class="pk-textbox" name="banpostread" data-value="{$forumdata['banpostread']}">
+            <option value="0">关闭</option>
+            <option value="1">开启</option>
+        </select>
+        <!-- 版块状态 -->
+        <select class="pk-textbox" name="show" data-value="{$forumdata['show']}">
+            <option value="1">显示</option>
+            <option value="0">隐藏</option>
+        </select>
+        <!-- SEO标题 -->
+        <input type="text" class="pk-textbox" name="webtitle" value="{htmlspecialchars($forumdata['webtitle'],ENT_QUOTES)}"
+            placeholder="seo标题，为空则自动适配">
+        <!-- SEO关键词 -->
+        <input type="text" class="pk-textbox" name="webkeywords" value="{htmlspecialchars($forumdata['webkeywords'],ENT_QUOTES)}"
+            placeholder="seo关键词，为空则自动适配">
+        <!-- SEO描述 -->
+        <textarea rows="5" name="webdescription" class="pk-textarea  pk-width-all" placeholder="seo描述，为空则自动适配">{htmlspecialchars($forumdata['webdescription'],ENT_QUOTES)}</textarea> </div>
+</form>

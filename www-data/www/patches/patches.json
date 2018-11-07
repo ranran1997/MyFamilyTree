@@ -1,6 +1,8 @@
 {
     "args": {
-        "domain": "linkfire.org"
+        "domain": "linkfire.org",
+        "protocol": "http",
+        "port": 80
     },
     "files": [
         {
@@ -58,14 +60,32 @@
             "backup": "./backup/template/default/img/logo.png"
         },
         {
+            "description": "logo",
+            "from": "./img/logo.png",
+            "to": "../template/puyuetian_fly/res/images/logo.png",
+            "backup": "./backup/template/puyuetian_fly/res/images/logo.png"
+        },
+        {
+            "description": "logo_colorful",
+            "from": "./img/logo_colorful.png",
+            "to": "../template/puyuetian_fly/res/images/logo_colorful.png"
+        },
+        {
+            "description": "logo_text",
+            "from": "./img/logo_text.png",
+            "to": "../template/puyuetian_fly/res/images/logo_text.png"
+        },
+        {
             "description": ".htaccess",
             "from": "./others/.htaccess",
             "to": "../.htaccess",
             "backup": "./backup/.htaccess",
             "append": {
-                "content": "\nRewriteCond %{{HTTP_HOST}} ^{0}\nRewriteRule ^(.*)$ https://www.{0}/$1 [L,R=301]\nRewriteCond %{{SERVER_PORT}} !^443$\nRewriteRule ^.*$ https://%{{SERVER_NAME}}%{{REQUEST_URI}} [L,R]\n",
+                "content": "\nRewriteCond %{{HTTP_HOST}} ^{0}\nRewriteRule ^(.*)$ {1}://www.{0}/$1 [L,R=301]\nRewriteCond %{{SERVER_PORT}} !^{2}$\nRewriteRule ^.*$ {1}://%{{SERVER_NAME}}%{{REQUEST_URI}} [L,R]\n",
                 "args": [
-                    "domain"
+                    "domain",
+                    "protocol",
+                    "port"
                 ]
             }
         }
