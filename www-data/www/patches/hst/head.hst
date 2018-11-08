@@ -25,7 +25,7 @@
             <img src="template/puyuetian_fly/res/images/logo_text.png" alt="{$_G['SET']['LOGOTEXT']}" style="max-height: 100%;"
                 width="110"> </a>
         <ul id="puyuetian_fly-nav" class="layui-nav fly-nav layui-hide-xs layui-hide">{$_G['SET']['NAVHTMLCODE']}
-            <a class="fly-search">
+            <a class="fly-search" style="height: 0px;">
                 <i class="layui-icon" style="left: 65%; padding: 20px 15px 0 15px;"></i>
             </a>
             <a href="index.php?c=edit&type=read&sortid={$sortid}" class="fly-logo layui-btn" style="left: 70%; padding: 0 15px 0 15px;">发表新帖</a>

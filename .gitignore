@@ -4,3 +4,4 @@ www.lnk
 www-data/data/
 www-data/www/*
 !www-data/www/patches/
+www-data/www/patches/node_modules/

@@ -3,6 +3,10 @@ if (!defined('puyuetian')) {
     exit('403');
 }
 
+// 添加全局导航条
+require('app/quelaag_furysword/phpscript/gps.php');
+$_G['HTMLCODE']['OUTPUT'] = $_G['TEMP']['GPSHTML'] . $_G['HTMLCODE']['OUTPUT'];
+
 // 去除标题连字符
 $_G['SET']['EMBED_HEADMARKS'] .= <<<EOF
 <script>

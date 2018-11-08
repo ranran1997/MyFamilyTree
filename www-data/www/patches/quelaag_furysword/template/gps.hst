@@ -1,0 +1,11 @@
+<div class="layui-hide-xs">
+    <div class="fly-panel fly-column">
+        <div class="layui-container">
+            <ul class="layui-clear">
+                <li class="layui-hide-xs">
+                    <a href="index.php">首页</a>
+                    <span style="display:inline-block;color:#e2e2e2;height:10px">&raquo;</span>
+                </li> {$_G['TEMP']['GPSHTML']} </ul>
+        </div>
+    </div>
+</div>

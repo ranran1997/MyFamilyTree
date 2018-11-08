@@ -1,0 +1,14 @@
+<li data-id="{$clanData['id']}" style="overflow:hidden; width:30%;">
+    <p class="fly-case-img">
+        <img src="{$clanData['logourl']}" onerror="this.src='app/quelaag_furysword/template/img/clanlogo.png'" alt="" style="width: 100%;"> </p>
+    <div>
+        <div class="fly-case-desc" style="width: 100%; height: 40px; margin-top: 5px;">
+            <p style="font-size: 18px; font-weight: 600; word-break: keep-all; white-space:nowrap; text-align: center;">{$clanData['clanname']}</p>
+            <div style="text-align: right;">
+                <img src="app/quelaag_furysword/template/img/logo_address.png" style="width: 15px; height: 15px;"></img>
+                <font style="font-size: 10px; font-weight: 300; word-break:keep-all; white-space:nowrap;">{$clanData['cradle']}</font>
+            </div>
+        </div>
+        <p class="fly-case-desc">{$clanData['introduction']}</p>
+    </div>
+</li>
